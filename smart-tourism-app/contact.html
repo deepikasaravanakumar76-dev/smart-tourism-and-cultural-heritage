@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Bharat Yatra</title>
+<meta name="description" content="Get in touch with the Bharat Yatra team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="loader" aria-hidden="true"><div class="loader-mark"></div></div>
+
+<header>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="brand"><span class="brand-mark">&#9760;</span> Bharat Yatra</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="heritage.html">Heritage</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="planner.html">Trip Planner</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Switch to dark mode">&#9789;</button>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Questions, feedback or partnership ideas — we'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:640px;">
+      <div id="form-success" class="form-success" role="status"></div>
+
+      <form id="contact-form" class="card jali-frame" style="padding:36px;" novalidate>
+        <div class="form-group">
+          <label for="contact-name">Full Name</label>
+          <input type="text" id="contact-name" class="form-control" placeholder="Your name" required>
+          <span class="form-error">Please enter your full name (min. 2 characters).</span>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-email">Email Address</label>
+          <input type="email" id="contact-email" class="form-control" placeholder="you@example.com" required>
+          <span class="form-error">Please enter a valid email address.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-subject">Subject</label>
+          <input type="text" id="contact-subject" class="form-control" placeholder="What's this about?" required>
+          <span class="form-error">Subject should be at least 3 characters.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+          <span class="form-error">Message should be at least 10 characters.</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">&copy; 2026 Bharat Yatra. Built as a student portfolio project.</div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">&#8593;</button>
+
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+<script src="js/validation.js"></script>
+</body>
+</html>

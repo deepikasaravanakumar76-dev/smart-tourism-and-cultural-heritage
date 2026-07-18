@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharat Yatra | Smart Tourism &amp; Cultural Heritage</title>
+<meta name="description" content="Discover India's destinations, heritage and culture — plan trips, explore an interactive map and save your favourite places.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- Skip link for keyboard/screen-reader users -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Full-screen loading spinner, hidden by app.js once the page loads -->
+<div class="loader" aria-hidden="true"><div class="loader-mark"></div></div>
+
+<!-- ============ NAVIGATION ============ -->
+<header>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">&#9760;</span>
+        Bharat Yatra
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="heritage.html">Heritage</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="planner.html">Trip Planner</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Switch to dark mode">&#9789;</button>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Smart Tourism &amp; Cultural Heritage</span>
+        <h1>Journeys carved in stone,<br>stories carried in spirit.</h1>
+        <p>Explore India's forts, temples, backwaters and living traditions — plan your trip, wander an interactive map, and save the places that call to you.</p>
+
+        <form id="hero-search-form" class="search-bar" role="search">
+          <label for="hero-search-input" class="visually-hidden" style="position:absolute; left:-9999px;">Search destinations</label>
+          <input type="text" id="hero-search-input" placeholder="Search 'Taj Mahal', 'Goa', 'temples'...">
+          <button type="submit">Search</button>
+        </form>
+
+        <div class="hero-actions mt-40">
+          <a href="destinations.html" class="btn btn-primary">Explore Destinations</a>
+          <a href="planner.html" class="btn btn-outline" style="color:#fff; border-color:#fff;">Plan a Trip</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="jali-divider"></div>
+
+  <!-- ============ FEATURED DESTINATIONS ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Handpicked for you</span>
+        <h2>Featured Destinations</h2>
+        <p>The most loved places travellers are exploring right now.</p>
+      </div>
+      <div class="grid" id="featured-grid">
+        <!-- Populated by destinations.js -->
+      </div>
+      <div class="text-center mt-40">
+        <a href="destinations.html" class="btn btn-outline">View All Destinations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POPULAR ATTRACTIONS (category shortcuts) ============ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Browse by interest</span>
+        <h2>Popular Attraction Categories</h2>
+        <p>Jump straight to the kind of experience you're after.</p>
+      </div>
+      <div class="grid reveal-stagger" style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+        <a href="destinations.html?cat=historical" class="card jali-frame text-center" style="padding:34px 18px;">
+          <div style="font-size:2rem;">&#127963;</div><h3 style="font-size:1rem; margin-top:12px;">Historical</h3>
+        </a>
+        <a href="destinations.html?cat=temple" class="card jali-frame text-center" style="padding:34px 18px;">
+          <div style="font-size:2rem;">&#9962;</div><h3 style="font-size:1rem; margin-top:12px;">Temples</h3>
+        </a>
+        <a href="destinations.html?cat=fort" class="card jali-frame text-center" style="padding:34px 18px;">
+          <div style="font-size:2rem;">&#127984;</div><h3 style="font-size:1rem; margin-top:12px;">Forts</h3>
+        </a>
+        <a href="destinations.html?cat=nature" class="card jali-frame text-center" style="padding:34px 18px;">
+          <div style="font-size:2rem;">&#127796;</div><h3 style="font-size:1rem; margin-top:12px;">Nature</h3>
+        </a>
+        <a href="destinations.html?cat=beach" class="card jali-frame text-center" style="padding:34px 18px;">
+          <div style="font-size:2rem;">&#127958;</div><h3 style="font-size:1rem; margin-top:12px;">Beaches</h3>
+        </a>
+        <a href="destinations.html?cat=adventure" class="card jali-frame text-center" style="padding:34px 18px;">
+          <div style="font-size:2rem;">&#9968;</div><h3 style="font-size:1rem; margin-top:12px;">Adventure</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATISTICS ============ -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div>
+        <div class="stat-number" data-count="500" data-suffix="+">0</div>
+        <div class="stat-label">Destinations Listed</div>
+      </div>
+      <div>
+        <div class="stat-number" data-count="120000" data-suffix="+">0</div>
+        <div class="stat-label">Happy Travellers</div>
+      </div>
+      <div>
+        <div class="stat-number" data-count="28" data-suffix=" States">0</div>
+        <div class="stat-label">Covered Across India</div>
+      </div>
+      <div>
+        <div class="stat-number" data-count="4" data-suffix=".8/5">0</div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Traveller stories</span>
+        <h2>What Explorers Are Saying</h2>
+      </div>
+      <div class="grid reveal-stagger" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"The trip planner put together a itinerary for Jaipur in seconds — saved me hours of research."</p>
+          <div class="testimonial-person">
+            <div class="testimonial-avatar">A</div>
+            <div><strong>Aditi R.</strong><div style="font-size:0.8rem; color:var(--text-secondary);">Bengaluru</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"Loved the interactive map — found a heritage hotel near Amber Fort I never knew existed."</p>
+          <div class="testimonial-person">
+            <div class="testimonial-avatar">R</div>
+            <div><strong>Rohan M.</strong><div style="font-size:0.8rem; color:var(--text-secondary);">Pune</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"The cultural heritage section taught my kids more about our festivals than any textbook."</p>
+          <div class="testimonial-person">
+            <div class="testimonial-avatar">S</div>
+            <div><strong>Sneha K.</strong><div style="font-size:0.8rem; color:var(--text-secondary);">Ahmedabad</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:14px; display:inline-flex;">
+          <span class="brand-mark">&#9760;</span> Bharat Yatra
+        </a>
+        <p style="max-width:280px; color:#B7C2CC; font-size:0.9rem;">A student-built smart tourism &amp; cultural heritage guide to exploring India's destinations, traditions and stories.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">&#102;</a>
+          <a href="#" aria-label="Instagram">&#105;</a>
+          <a href="#" aria-label="Twitter">&#116;</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="heritage.html">Heritage</a></li>
+          <li><a href="map.html">Interactive Map</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Plan</h4>
+        <ul>
+          <li><a href="planner.html">Trip Planner</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="about.html">Our Mission</a></li>
+          <li><a href="about.html">Technologies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Bharat Yatra. Built as a student portfolio project. All destination images via Unsplash.
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">&#8593;</button>
+
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+<script src="js/destinations.js"></script>
+</body>
+</html>

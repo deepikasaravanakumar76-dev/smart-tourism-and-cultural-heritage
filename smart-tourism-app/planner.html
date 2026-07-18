@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trip Planner | Bharat Yatra</title>
+<meta name="description" content="Build a sample itinerary based on destination, days, budget and interests, and save it for later.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+  .planner-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .checkbox-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .checkbox-item { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; }
+  @media (max-width: 900px) { .planner-layout { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="loader" aria-hidden="true"><div class="loader-mark"></div></div>
+
+<header>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="brand"><span class="brand-mark">&#9760;</span> Bharat Yatra</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="heritage.html">Heritage</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="planner.html">Trip Planner</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Switch to dark mode">&#9789;</button>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Trip Planner</h1>
+      <p>Pick a destination and a few preferences — we'll sketch a sample day-by-day plan you can save.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container planner-layout">
+
+      <form id="planner-form" class="card jali-frame" style="padding:32px;">
+        <h2 style="margin-bottom:22px; font-size:1.4rem;">Build Your Itinerary</h2>
+
+        <div class="form-group">
+          <label for="planner-destination">Destination</label>
+          <select id="planner-destination" class="form-control" required></select>
+        </div>
+
+        <div class="form-group">
+          <label for="planner-days">Number of Days</label>
+          <input type="number" id="planner-days" class="form-control" min="1" max="14" value="3" required>
+        </div>
+
+        <div class="form-group">
+          <label for="planner-budget">Budget</label>
+          <select id="planner-budget" class="form-control">
+            <option value="budget">Budget</option>
+            <option value="moderate" selected>Moderate</option>
+            <option value="luxury">Luxury</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Interests</label>
+          <div class="checkbox-grid">
+            <label class="checkbox-item"><input type="checkbox" name="interest" value="historical"> Historical</label>
+            <label class="checkbox-item"><input type="checkbox" name="interest" value="nature"> Nature</label>
+            <label class="checkbox-item"><input type="checkbox" name="interest" value="adventure"> Adventure</label>
+            <label class="checkbox-item"><input type="checkbox" name="interest" value="temple"> Temples</label>
+            <label class="checkbox-item"><input type="checkbox" name="interest" value="beach"> Beach</label>
+            <label class="checkbox-item"><input type="checkbox" name="interest" value="museum"> Museums</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block mt-40">Generate Itinerary</button>
+      </form>
+
+      <div id="itinerary-result">
+        <div class="empty-state">Fill in the form and click "Generate Itinerary" to see your sample plan here.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Local Storage</span>
+        <h2>Saved Trips</h2>
+        <p>Itineraries you've saved on this device.</p>
+      </div>
+      <div id="saved-itineraries"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">&copy; 2026 Bharat Yatra. Built as a student portfolio project.</div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">&#8593;</button>
+
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+<script src="js/destinations.js"></script>
+<script src="js/planner.js"></script>
+</body>
+</html>

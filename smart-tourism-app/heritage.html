@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cultural Heritage | Bharat Yatra</title>
+<meta name="description" content="Explore heritage monuments, a historical timeline, festivals, dances, food and handicrafts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+  .timeline { position: relative; margin: 0 auto; max-width: 800px; padding-left: 30px; border-left: 2px solid var(--heritage-gold); }
+  .timeline-item { position: relative; padding-bottom: 40px; }
+  .timeline-item::before {
+    content: ""; position: absolute; left: -37px; top: 4px;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--heritage-gold); border: 3px solid var(--bg-primary);
+  }
+  .timeline-year { color: var(--accent-2); font-weight: 700; font-family: var(--font-display); font-size: 1.1rem; }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="loader" aria-hidden="true"><div class="loader-mark"></div></div>
+
+<header>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="brand"><span class="brand-mark">&#9760;</span> Bharat Yatra</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="heritage.html">Heritage</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="planner.html">Trip Planner</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Switch to dark mode">&#9789;</button>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Cultural Heritage</h1>
+      <p>Monuments, milestones, festivals and traditions that shape the story of India.</p>
+    </div>
+  </section>
+
+  <!-- HERITAGE MONUMENTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Living history</span>
+        <h2>Heritage Monuments</h2>
+        <p>UNESCO-recognised and nationally protected sites that define India's architectural legacy.</p>
+      </div>
+      <div class="grid reveal-stagger">
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80" alt="Taj Mahal" loading="lazy"></div>
+          <div class="card-body"><h3>Taj Mahal</h3><p class="card-desc">A UNESCO World Heritage Site and one of the New Seven Wonders of the World, completed in 1653.</p></div>
+        </article>
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80" alt="Amber Fort" loading="lazy"></div>
+          <div class="card-body"><h3>Hill Forts of Rajasthan</h3><p class="card-desc">Six majestic forts, including Amber and Mehrangarh, inscribed together as a UNESCO World Heritage Site.</p></div>
+        </article>
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80" alt="Sun Temple" loading="lazy"></div>
+          <div class="card-body"><h3>Konark Sun Temple</h3><p class="card-desc">A 13th-century temple shaped like a colossal chariot with intricately carved stone wheels and horses.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORICAL TIMELINE -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Through the ages</span>
+        <h2>Historical Timeline</h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline-item"><div class="timeline-year">c. 2500 BCE</div><p>The Indus Valley Civilisation flourishes with planned cities like Mohenjo-daro and Harappa.</p></div>
+        <div class="timeline-item"><div class="timeline-year">c. 320 CE</div><p>The Gupta Empire ushers in a golden age of art, science and literature.</p></div>
+        <div class="timeline-item"><div class="timeline-year">1526</div><p>The Mughal Empire is founded, later producing landmarks such as the Taj Mahal and Red Fort.</p></div>
+        <div class="timeline-item"><div class="timeline-year">1947</div><p>India gains independence, beginning a new chapter of nation-building and cultural revival.</p></div>
+        <div class="timeline-item"><div class="timeline-year">Today</div><p>Thousands of heritage sites, festivals and living traditions continue to be preserved and celebrated.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FESTIVALS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Celebration</span>
+        <h2>Traditional Festivals</h2>
+      </div>
+      <div class="grid reveal-stagger">
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1610019622591-ffd8f2d3cf74?w=800&q=80" alt="Diwali lamps" loading="lazy"></div>
+          <div class="card-body"><h3>Diwali</h3><p class="card-desc">The festival of lights, marked with oil lamps, fireworks and sweets celebrating good over evil.</p></div>
+        </article>
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?w=800&q=80" alt="Holi colours" loading="lazy"></div>
+          <div class="card-body"><h3>Holi</h3><p class="card-desc">The festival of colours, welcoming spring with powder colours, music and dance in the streets.</p></div>
+        </article>
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1600095134536-14e9c4788c50?w=800&q=80" alt="Onam boat race" loading="lazy"></div>
+          <div class="card-body"><h3>Onam</h3><p class="card-desc">Kerala's harvest festival, famous for snake-boat races, flower carpets (pookalam) and grand feasts.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DANCES -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Movement &amp; music</span>
+        <h2>Famous Classical Dances</h2>
+      </div>
+      <div class="grid reveal-stagger">
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80" alt="Bharatanatyam dancer" loading="lazy"></div>
+          <div class="card-body"><h3>Bharatanatyam</h3><p class="card-desc">A classical dance form from Tamil Nadu known for its precise footwork and expressive storytelling.</p></div>
+        </article>
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1547153760-18fc86324498?w=800&q=80" alt="Kathak dancer" loading="lazy"></div>
+          <div class="card-body"><h3>Kathak</h3><p class="card-desc">A North Indian dance form characterised by fast spins and rhythmic footwork, rooted in storytelling.</p></div>
+        </article>
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80" alt="Kathakali performer" loading="lazy"></div>
+          <div class="card-body"><h3>Kathakali</h3><p class="card-desc">A Kerala dance-drama recognised by elaborate makeup, costumes and dramatic facial expressions.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOD -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Taste of tradition</span>
+        <h2>Traditional Food</h2>
+      </div>
+      <div class="grid reveal-stagger">
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&q=80" alt="Thali platter" loading="lazy"></div>
+          <div class="card-body"><h3>Regional Thalis</h3><p class="card-desc">A complete meal served on one platter, varying by region but always balancing flavour and nutrition.</p></div>
+        </article>
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=800&q=80" alt="Biryani" loading="lazy"></div>
+          <div class="card-body"><h3>Biryani</h3><p class="card-desc">A fragrant layered rice dish with roots in Mughal royal kitchens, now beloved across the country.</p></div>
+        </article>
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800&q=80" alt="Sweets" loading="lazy"></div>
+          <div class="card-body"><h3>Mithai (Sweets)</h3><p class="card-desc">Milk- and sugar-based sweets like ladoo and jalebi, central to every festival and celebration.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HANDICRAFTS & TRADITIONS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Made by hand</span>
+        <h2>Handicrafts &amp; Local Traditions</h2>
+      </div>
+      <div class="grid reveal-stagger">
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1528283648649-33347faa5d9e?w=800&q=80" alt="Handloom weaving" loading="lazy"></div>
+          <div class="card-body"><h3>Handloom Weaving</h3><p class="card-desc">Generations-old weaving traditions producing textiles like Banarasi silk and Pochampally ikat.</p></div>
+        </article>
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80" alt="Pottery" loading="lazy"></div>
+          <div class="card-body"><h3>Blue Pottery &amp; Ceramics</h3><p class="card-desc">Jaipur's distinctive blue pottery, made without clay, using quartz stone powder and glaze.</p></div>
+        </article>
+        <article class="card jali-frame">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1600431521340-491eca880813?w=800&q=80" alt="Rangoli pattern" loading="lazy"></div>
+          <div class="card-body"><h3>Rangoli</h3><p class="card-desc">Colourful floor art made from rice powder or flower petals, welcoming guests and good fortune.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">&copy; 2026 Bharat Yatra. Built as a student portfolio project.</div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">&#8593;</button>
+
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
