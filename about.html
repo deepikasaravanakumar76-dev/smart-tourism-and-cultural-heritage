@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Bharat Yatra</title>
+<meta name="description" content="Our mission, vision, technologies used, and developer information.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="loader" aria-hidden="true"><div class="loader-mark"></div></div>
+
+<header>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="brand"><span class="brand-mark">&#9760;</span> Bharat Yatra</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="heritage.html">Heritage</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="planner.html">Trip Planner</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Switch to dark mode">&#9789;</button>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section class="page-hero">
+    <div class="container">
+      <h1>About Bharat Yatra</h1>
+      <p>Why this project exists, and how it was built.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid reveal-stagger" style="grid-template-columns: 1fr 1fr; gap:30px;">
+        <div class="card jali-frame" style="padding:32px;">
+          <h2 style="margin-bottom:14px;">Our Mission</h2>
+          <p style="color:var(--text-secondary);">To make India's destinations and cultural heritage easy to discover, plan for, and appreciate — through a fast, accessible, and genuinely useful web experience, built without unnecessary complexity.</p>
+        </div>
+        <div class="card jali-frame" style="padding:32px;">
+          <h2 style="margin-bottom:14px;">Our Vision</h2>
+          <p style="color:var(--text-secondary);">A future where every traveller, student, and curious mind can explore heritage sites, plan meaningful trips, and understand living traditions — all from one place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Under the hood</span>
+        <h2>Technologies Used</h2>
+      </div>
+      <div class="grid reveal-stagger" style="grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));">
+        <div class="card jali-frame text-center" style="padding:24px;"><h3 style="font-size:1rem;">HTML5</h3></div>
+        <div class="card jali-frame text-center" style="padding:24px;"><h3 style="font-size:1rem;">CSS3</h3></div>
+        <div class="card jali-frame text-center" style="padding:24px;"><h3 style="font-size:1rem;">Vanilla JavaScript</h3></div>
+        <div class="card jali-frame text-center" style="padding:24px;"><h3 style="font-size:1rem;">Leaflet.js</h3></div>
+        <div class="card jali-frame text-center" style="padding:24px;"><h3 style="font-size:1rem;">Local Storage</h3></div>
+        <div class="card jali-frame text-center" style="padding:24px;"><h3 style="font-size:1rem;">OpenStreetMap</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Behind the project</span>
+        <h2>Developer Information</h2>
+      </div>
+      <div class="card jali-frame text-center reveal" style="max-width:500px; margin:0 auto; padding:40px;">
+        <div style="width:80px; height:80px; border-radius:50%; background:var(--heritage-gold); color:var(--ink-indigo); display:grid; place-items:center; margin:0 auto 18px; font-family:var(--font-display); font-size:1.8rem;">CS</div>
+        <h3>Computer Science Student</h3>
+        <p style="color:var(--text-secondary); margin-top:10px;">Built as a portfolio project to practice responsive design, DOM manipulation, Local Storage, and map integration using only front-end technologies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Questions</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div style="max-width:700px; margin:0 auto;">
+        <div class="faq-item open">
+          <button class="faq-question">Is this project connected to a real backend? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>No — everything runs in the browser using HTML, CSS and vanilla JavaScript, with Local Storage for saving favorites and itineraries.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Where does the destination data come from? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>A local JSON file (data/destinations.json) that the app fetches and renders dynamically.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Will my saved favorites sync across devices? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Not currently — Local Storage saves data only on the browser and device you're using.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I contribute or reuse this code? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes, it's an open, MIT-licensed portfolio project — see the README for details.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">&copy; 2026 Bharat Yatra. Built as a student portfolio project.</div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">&#8593;</button>
+
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

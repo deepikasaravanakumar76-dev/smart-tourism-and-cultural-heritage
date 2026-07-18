@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinations | Bharat Yatra</title>
+<meta name="description" content="Browse, filter and sort tourist destinations across India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="loader" aria-hidden="true"><div class="loader-mark"></div></div>
+
+<header>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="brand"><span class="brand-mark">&#9760;</span> Bharat Yatra</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="heritage.html">Heritage</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="planner.html">Trip Planner</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Switch to dark mode">&#9789;</button>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Destination Explorer</h1>
+      <p>Filter by category, sort by what matters to you, or search by name.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="toolbar">
+        <div class="chip-group" id="category-chips">
+          <button class="chip active" data-category-filter="all">All</button>
+          <button class="chip" data-category-filter="historical">Historical</button>
+          <button class="chip" data-category-filter="religious">Religious</button>
+          <button class="chip" data-category-filter="nature">Nature</button>
+          <button class="chip" data-category-filter="adventure">Adventure</button>
+          <button class="chip" data-category-filter="museum">Museum</button>
+          <button class="chip" data-category-filter="beach">Beach</button>
+          <button class="chip" data-category-filter="fort">Fort</button>
+          <button class="chip" data-category-filter="temple">Temple</button>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <input type="text" id="explorer-search" class="text-control" placeholder="Search destinations...">
+          <select id="sort-select" class="select-control" aria-label="Sort destinations">
+            <option value="popular">Sort: Popular</option>
+            <option value="rating">Sort: Rating</option>
+            <option value="alphabetical">Sort: A–Z</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="results-count" style="color:var(--text-secondary); margin-bottom:20px; font-size:0.9rem;"></p>
+
+      <div class="grid" id="destinations-grid">
+        <!-- Populated by destinations.js -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">&copy; 2026 Bharat Yatra. Built as a student portfolio project.</div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">&#8593;</button>
+
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+<script src="js/destinations.js"></script>
+<script>
+  // Support ?cat= links coming from the home page category shortcuts
+  document.addEventListener("DOMContentLoaded", () => {
+    const cat = new URLSearchParams(location.search).get("cat");
+    if (cat) {
+      const chip = document.querySelector(`[data-category-filter="${cat}"]`);
+      chip?.click();
+    }
+  });
+</script>
+</body>
+</html>
